@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e0f3ff"><title>Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body class="theme-blue font-iphone"><div class="app">
+
+    <!-- CALCULATOR PAGE -->
+
+    <main id="calculatorPage" class="page calculator-page">
+
+        <header class="top-bar">
+
+            <h1>ماشین حساب</h1>
+
+            <button id="settingsBtn" class="icon-btn" type="button" aria-label="تنظیمات">
+                <img src="icons/settings.svg" alt="">
+            </button>
+
+        </header>
+
+        <!-- DISPLAY -->
+
+        <section class="display">
+
+            <img id="themeAnimal" class="theme-animal" src="animals/stitch.png" alt="">
+
+            <div id="previous" class="previous"></div>
+
+            <div id="current" class="current">0</div>
+
+        </section>
+
+        <!-- BUTTONS -->
+
+        <section class="buttons">
+
+    <button class="btn function" data-action="clear">AC</button>
+    <button class="btn function" data-action="delete">⌫</button>
+    <button class="btn function" data-value="(">(</button>
+    <button class="btn function" data-value=")">)</button>
+
+    <button class="btn operator" data-value="sqrt">√</button>
+    <button class="btn operator" data-value="%">%</button>
+    <button class="btn operator" data-value="/">÷</button>
+    <button class="btn operator" data-value="*">×</button>
+
+    <button class="btn" data-value="7">7</button>
+    <button class="btn" data-value="8">8</button>
+    <button class="btn" data-value="9">9</button>
+    <button class="btn operator" data-value="-">−</button>
+
+    <button class="btn" data-value="4">4</button>
+    <button class="btn" data-value="5">5</button>
+    <button class="btn" data-value="6">6</button>
+    <button class="btn operator" data-value="+">+</button>
+
+    <button class="btn" data-value="1">1</button>
+    <button class="btn" data-value="2">2</button>
+    <button class="btn" data-value="3">3</button>
+    <button class="btn equal" data-action="calculate">=</button>
+
+    <button class="btn zero" data-value="0">0</button>
+    <button class="btn" data-value=".">.</button>
+
+</section>
+
+    </main>
+
+    <!-- SETTINGS PAGE -->
+
+    <main id="settingsPage" class="page settings-page">
+
+        <header class="settings-top">
+
+            <button id="backBtn" class="back-btn" type="button" aria-label="بازگشت">
+                <img src="icons/back.svg" alt="">
+            </button>
+
+            <h1 id="settingsTitle">تنظیمات</h1>
+
+            <div class="top-space"></div>
+
+        </header>
+
+        <section class="settings-content">
+
+            <!-- SETTINGS HOME -->
+
+            <div id="settingsHome" class="settings-view active">
+
+                <div class="settings-section">
+
+                    <h2>تنظیمات برنامه</h2>
+
+                    <p class="section-description">
+                        بخش مورد نظرت رو انتخاب کن
+                    </p>
+
+                    <div class="settings-options">
+
+                        <button class="settings-option" data-view="themesView" type="button">
+
+                            <span class="option-icon palette-icon" aria-hidden="true"></span>
+
+                            <span class="option-info">
+                                <strong>تم‌ها</strong>
+                                <small>تغییر ظاهر برنامه</small>
+                            </span>
+
+                            <span class="option-arrow">‹</span>
+
+                        </button>
+
+                        <button class="settings-option" data-view="fontsView" type="button">
+
+                            <span class="option-icon font-icon" aria-hidden="true"></span>
+
+                            <span class="option-info">
+                                <strong>فونت‌ها</strong>
+                                <small>تغییر فونت برنامه</small>
+                            </span>
+
+                            <span class="option-arrow">‹</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- THEMES VIEW -->
+
+<div id="themesView" class="settings-view">
+
+    <!-- NORMAL THEMES SECTION -->
+
+    <div class="settings-section">
+
+        <h2>تم‌های معمولی</h2>
+
+        <p class="section-description">
+            تم مورد علاقه‌ات رو انتخاب کن
+        </p>
+
+        <div class="themes">
+
+            <button class="theme-card blue" data-theme="blue" type="button">
+                <span class="theme-preview"></span>
+                <span>آبی پاستیلی</span>
+            </button>
+
+            <button class="theme-card green" data-theme="green" type="button">
+                <span class="theme-preview"></span>
+                <span>سبز پاستیلی</span>
+            </button>
+
+            <button class="theme-card red" data-theme="red" type="button">
+                <span class="theme-preview"></span>
+                <span>قرمز پاستیلی</span>
+            </button>
+
+            <button class="theme-card yellow" data-theme="yellow" type="button">
+                <span class="theme-preview"></span>
+                <span>زرد پاستیلی</span>
+            </button>
+
+            <button class="theme-card pink" data-theme="pink" type="button">
+                <span class="theme-preview"></span>
+                <span>صورتی پاستیلی</span>
+            </button>
+
+            <button class="theme-card purple" data-theme="purple" type="button">
+                <span class="theme-preview"></span>
+                <span>بنفش پاستیلی</span>
+            </button>
+
+            <button class="theme-card orange" data-theme="orange" type="button">
+                <span class="theme-preview"></span>
+                <span>نارنجی</span>
+            </button>
+
+            <button class="theme-card lemon" data-theme="lemon" type="button">
+                <span class="theme-preview"></span>
+                <span>لیمویی</span>
+            </button>
+
+            <button class="theme-card white" data-theme="white" type="button">
+                <span class="theme-preview"></span>
+                <span>سفید معمولی</span>
+            </button>
+
+            <button class="theme-card black" data-theme="black" type="button">
+                <span class="theme-preview"></span>
+                <span>مشکی معمولی</span>
+            </button>
+
+            <button class="theme-card darkblue" data-theme="darkblue" type="button">
+                <span class="theme-preview"></span>
+                <span>آبی تیره</span>
+            </button>
+
+            <button class="theme-card brown" data-theme="brown" type="button">
+                <span class="theme-preview"></span>
+                <span>قهوه‌ای</span>
+            </button>
+
+            <button class="theme-card liquid" data-theme="liquid" type="button">
+                <span class="theme-preview"></span>
+                <span>Liquid Glass</span>
+            </button>
+
+            <button class="theme-card plg" data-theme="plg" type="button">
+                <span class="theme-preview"></span>
+                <span>PLG</span>
+            </button>
+
+            <button class="theme-card rlg" data-theme="rlg" type="button">
+                <span class="theme-preview"></span>
+                <span>RLG</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SERIES THEMES SECTION -->
+
+    <div class="settings-section series-themes-section">
+
+        <h2>تم‌های سریالی</h2>
+
+        <p class="section-description">
+            تم مورد علاقه‌ات رو انتخاب کن
+        </p>
+
+        <div class="themes">
+
+            <button class="theme-card wednesday" data-theme="wednesday" type="button">
+                <span class="theme-preview"></span>
+                <span>ونزدی</span>
+            </button>
+
+            <button class="theme-card squidgame" data-theme="squidgame" type="button">
+                <span class="theme-preview"></span>
+                <span>بازی مرکب</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- FONTS VIEW -->
+
+            <div id="fontsView" class="settings-view">
+
+                <div class="settings-section">
+
+                    <h2>فونت برنامه</h2>
+
+                    <p class="section-description">
+                        فونت مورد علاقه‌ات رو انتخاب کن
+                    </p>
+
+                    <div class="font-options">
+
+                        <button class="font-card" data-font="iphone" type="button">
+                            <span class="font-name">آیفون</span>
+                            <span class="font-sample">ماشین حساب 123</span>
+                            <span class="font-check"></span>
+                        </button>
+
+                        <button class="font-card" data-font="device" type="button">
+                            <span class="font-name">پیش‌فرض دستگاه</span>
+                            <span class="font-sample">ماشین حساب 123</span>
+                            <span class="font-check"></span>
+                        </button>
+
+                        <button class="font-card" data-font="vazir" type="button">
+                            <span class="font-name">وزیر</span>
+                            <span class="font-sample">ماشین حساب 123</span>
+                            <span class="font-check"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
